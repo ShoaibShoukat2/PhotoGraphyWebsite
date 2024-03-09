@@ -1,0 +1,23 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+    Code
+{% endblock title %}
+
+{% block main_content %}
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form action="/submit_code" method="post">
+                    <div class="form-group">
+                        <label for="code">Enter your code:</label>
+                        <input type="number" class="form-control" id="code" name="code" placeholder="Enter a number">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock main_content %}
+
+

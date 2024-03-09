@@ -1,0 +1,230 @@
+<!-- File: media_page.html -->
+{% extends 'base2.html' %}
+
+{% block title %}
+    Media
+{% endblock title %}
+
+{% block main_content %}
+  <!-- Add Three.js library and OrbitControls -->
+  <script type="module" src="https://threejs.org/build/three.module.js"></script>
+  <script type="text/javascript" src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
+  <script type="module" src="https://threejs.org/examples/js/loaders/GLTFLoader.js"></script>
+
+    <div class="container mt-4" style="margin-bottom: 50px;">
+        <h1 class="text-center mb-4">Welcome to Your Media Page</h1>
+        <p class="lead text-center">Explore our collection of high-quality photos, images, and 3D models. Click on an item to view details and make a purchase.</p>
+
+        <!-- Media Items Grid -->
+        <div class="row">
+            <!-- Example Media Item 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0">
+                    <img src="../static/images/Home1.jpg" class="card-img-top rounded" alt="Media Item 1">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Media Item 1 Title</h5>
+                        <p class="card-text">Description of Media Item 1.</p>
+                        <p class="card-text">$19.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <!-- Add a star rating component here if applicable -->
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Media Item 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0">
+                    <img src="../static/images/Home1.jpg" class="card-img-top rounded" alt="Media Item 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Media Item 2 Title</h5>
+                        <p class="card-text">Description of Media Item 2.</p>
+                        <p class="card-text">$24.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <!-- Add a star rating component here if applicable -->
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0">
+                    <img src="../static/images/Home1.jpg" class="card-img-top rounded" alt="Media Item 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Media Item 2 Title</h5>
+                        <p class="card-text">Description of Media Item 2.</p>
+                        <p class="card-text">$24.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <!-- Add a star rating component here if applicable -->
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0">
+                    <img src="../static/images/Home1.jpg" class="card-img-top rounded" alt="Media Item 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Media Item 2 Title</h5>
+                        <p class="card-text">Description of Media Item 2.</p>
+                        <p class="card-text">$24.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <!-- Add a star rating component here if applicable -->
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0">
+                    <img src="../static/images/Home1.jpg" class="card-img-top rounded" alt="Media Item 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Media Item 2 Title</h5>
+                        <p class="card-text">Description of Media Item 2.</p>
+                        <p class="card-text">$24.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <!-- Add a star rating component here if applicable -->
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0">
+                    <img src="../static/images/Home1.jpg" class="card-img-top rounded" alt="Media Item 2">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Media Item 2 Title</h5>
+                        <p class="card-text">Description of Media Item 2.</p>
+                        <p class="card-text">$24.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <!-- Add a star rating component here if applicable -->
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more media items as needed -->
+        </div>
+          <!-- Video Section -->
+        <!-- Video Section -->
+        <h2 class="text-center mb-4">Featured Videos</h2>
+        <hr class="line">
+        <div class="row">
+            <!-- Example Video Item 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0" onmouseover="startVideo(this)" onmouseout="stopVideo(this)">
+                    <!-- Add video content here -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" src="../static/videos/video (2160p).mp4"></video>
+                    </div>
+
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Video Title 1</h5>
+                        <p class="card-text">Description of Video 1.</p>
+                        <p class="card-text">$29.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0" onmouseover="startVideo(this)" onmouseout="stopVideo(this)">
+                    <!-- Add video content here -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" src="../static/videos/video (2160p).mp4"></video>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Video Title 1</h5>
+                        <p class="card-text">Description of Video 1.</p>
+                        <p class="card-text">$29.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0" onmouseover="startVideo(this)" onmouseout="stopVideo(this)">
+                    <!-- Add video content here -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <video class="embed-responsive-item" src="../static/videos/video (2160p).mp4"></video>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Video Title 1</h5>
+                        <p class="card-text">Description of Video 1.</p>
+                        <p class="card-text">$29.99</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0">
+                        <button class="btn btn-dark btn-block">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more video items as needed -->
+        </div>
+
+        <!-- 3D Models Section -->
+   
+
+    
+
+    <!-- Custom CSS for additional styling -->
+    <style>
+        .card:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card-img-top {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1);
+        }
+          /* Additional styles for the video section */
+          .embed-responsive {
+            position: relative;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover video {
+            transform: scale(1.1);
+        }
+    </style>
+   
+    <!-- Custom JavaScript for video playback -->
+    <script>
+        function startVideo(element) {
+            var video = element.querySelector('video');
+            video.play();
+            setTimeout(function () {
+                video.pause();
+                video.currentTime = 0;
+            }, 5000); // Adjust the duration in milliseconds (5000 = 5 seconds)
+        }
+
+        function stopVideo(element) {
+            var video = element.querySelector('video');
+            video.pause();
+            video.currentTime = 0;
+        }
+    </script>
+
+{% endblock main_content %}
+

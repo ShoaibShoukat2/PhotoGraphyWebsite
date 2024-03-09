@@ -1,0 +1,117 @@
+{% extends 'base2.html' %}
+{% load static %}
+
+{% block title %}
+    Media
+{% endblock title %}
+
+{% block main_content %}
+<!-- Add Three.js library and GLTFLoader -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+
+<div class="container mt-4 px-0"> <!-- Removed horizontal padding -->
+    <h1 class="text-center mb-4">3D Media</h1>
+    <p class="lead text-center">Explore our collection of high-quality 3D models. Click on an item to view details and make a purchase.</p>
+
+    <!-- Media Items Grid -->
+    <div class="row" id="mediaItems">
+        <!-- Example Media Item 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0">
+                <div id="modelViewer1" class="model-viewer"></div> <!-- Removed inline style -->
+                <div class="card-body text-center">
+                    <h5 class="card-title">3D Model Title</h5>
+                    <p class="card-text">Description of the 3D model.</p>
+                    <p class="card-text">$19.99</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <button class="btn btn-dark btn-block">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0">
+                <div id="modelViewer1" class="model-viewer"></div> <!-- Removed inline style -->
+                <div class="card-body text-center">
+                    <h5 class="card-title">3D Model Title</h5>
+                    <p class="card-text">Description of the 3D model.</p>
+                    <p class="card-text">$19.99</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <button class="btn btn-dark btn-block">Buy Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0">
+                <div id="modelViewer1" class="model-viewer"></div> <!-- Removed inline style -->
+                <div class="card-body text-center">
+                    <h5 class="card-title">3D Model Title</h5>
+                    <p class="card-text">Description of the 3D model.</p>
+                    <p class="card-text">$19.99</p>
+                </div>
+                <div class="card-footer bg-transparent border-0">
+                    <button class="btn btn-dark btn-block">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more media items as needed -->
+    </div>
+</div>
+
+<!-- Custom JavaScript for loading 3D models -->
+<script>
+    // Create a scene
+    var scene = new THREE.Scene();
+
+    // Add lighting to the scene
+    var ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+    scene.add(ambientLight);
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+    directionalLight.position.set(10, 10, 10);
+    scene.add(directionalLight);
+
+    // Set up camera
+    var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 2;  // Adjusted camera position
+
+    // Initialize Three.js renderer
+    var renderer = new THREE.WebGLRenderer();
+    var viewerDiv = document.getElementById('modelViewer1');
+    var viewerWidth = 360; // Adjust the width as needed
+    var viewerHeight = 400; // Adjust the height as needed
+    renderer.setSize(viewerWidth, viewerHeight);
+    viewerDiv.appendChild(renderer.domElement);
+
+    // Load and display 3D model
+    var loader = new THREE.GLTFLoader();
+    loader.load(
+        '{% static "3Dvideos/Whitecap.glb" %}',
+        function (gltf) {
+            var model = gltf.scene;
+            scene.add(model);
+        },
+        undefined,
+        function (error) {
+            console.error(error);
+        }
+    );
+
+    // Add OrbitControls
+    var controls = new THREE.OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.dampingFactor = 0.25;
+    controls.rotateSpeed = 0.35;
+
+    // Render loop
+    function animate() {
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        controls.update(); // Update controls in the animation loop
+    }
+    animate();
+</script>
+{% endblock main_content %}

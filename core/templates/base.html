@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>{% block title %}{% endblock title %}</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+  <!-- fonts awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  {% block extra_css %}
+  {% endblock extra_css %}
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <div class="custom_menu-btn">
+          <button onclick="openNav()">
+            <span class="s-1"> </span>
+            <span class="s-2"> </span>
+            <span class="s-3"> </span>
+          </button>
+        </div>
+        <div id="myNav" class="overlay">
+          <div class="menu_btn-style ">
+            <button onclick="closeNav()">
+              <span class="s-1"> </span>
+              <span class="s-2"> </span>
+              <span class="s-3"> </span>
+            </button>
+          </div>
+          <div class="overlay-content">
+            <a class="active" href="index.html">
+              Home
+            </a>
+            <a class="" href="/about">
+              About
+            </a>
+            <a class="" href="/login">
+              login
+            </a>
+            <a class="" href="/signup">
+              signup
+            </a>
+            <a class="" href="/services">
+              Services
+            </a>
+            <a class="" href="/blog">
+              Blog
+            </a>
+            <a class="" href="/media">
+              Media
+            </a>
+            <a class="" href="/code">
+              Code
+            </a>
+           
+          </div>
+        </div>
+        <a class="navbar-brand" href="/">
+          <span>
+            Ebrook
+          </span>
+        </a>
+        <a href="/call-booking" class="call_btn">
+          Call Us Now
+        </a>
+      </nav>
+    </header>
+    <!-- end header section -->
+
+
+    {% block slider_section %}
+
+    {% endblock slider_section %}
+    
+  </div>
+
+    {% block main_content %}
+    
+    
+
+    {% endblock main_content %}
+
+
+  <!-- about section -->
+
+  {% block about_section %}
+  {% endblock about_section %}
+
+  <!-- end about section -->
+
+ 
+
+  <!-- portfolio section -->
+
+  {% block portfolio_container %}
+  {% endblock portfolio_container %}
+  
+  <!-- end portfolio section -->
+<div class="container">
+  {% block blog_slider %}
+
+  {% endblock blog_slider %}
+
+</div>
+ 
+
+  <!-- team section -->
+  {% block team_container %}
+
+  {% endblock team_container %}
+
+  <!-- end team section -->
+
+  <!-- contact section -->
+
+  {% block contact_section %}
+
+  {% endblock contact_section %}
+
+  <!-- end contact section -->
+
+  {% block footer %}
+  {% endblock footer %}
+
+  <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.js' %}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+  {% block extra_js %}
+
+  {% endblock extra_js %}
+  
+
+</body>
+
+</html>
+

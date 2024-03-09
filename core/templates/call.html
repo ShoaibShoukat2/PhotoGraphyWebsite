@@ -1,0 +1,43 @@
+{% extends 'base2.html' %}
+
+{% block title %}
+  <title>Call Booking - Your Website</title>
+{% endblock title %}
+
+{% block main_content %}
+  <div class="container mt-5" style="margin-bottom: 100px;">
+    <div class="card p-5 shadow-lg rounded" style="background-color: #e6e6e6;">
+        <h2 class="card-title text-center mb-4">Booked Appointment</h2>
+
+
+      <form action="/submit_booking" method="post">
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="datetime" class="form-label">Preferred Date and Time</label>
+          <input type="datetime-local" class="form-control" id="datetime" name="datetime" required>
+        </div>
+
+        <!-- Additional Fields as needed -->
+
+        <div class="d-grid gap-2">
+          <button type="submit" class="btn btn-warning btn-lg">Book YOUR APPOINTMENT</button>
+        </div>
+      </form>
+    </div>
+  </div>
+{% endblock main_content %}

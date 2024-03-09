@@ -1,0 +1,255 @@
+{% extends 'base2.html' %}
+
+{% block title %}Services{% endblock title %}
+
+{% block main_content %}
+<div class="container mb-3">
+  <h1 class="mt-5 mb-4 text-center">Real Estate Photography Packages</h1>
+  <hr>
+
+  <form action="/submit_services" method="post"> <!-- Assuming you're submitting the selected services -->
+
+    <div class="row">
+
+      <!-- Standard Photo Packages -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card mb-3">
+            <div class="card-header">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseStandardPhoto" aria-expanded="true" aria-controls="collapseStandardPhoto">
+                        Standard Photo Packages
+                        <span class="arrow"></span>
+                    </button>
+                </h2>
+            </div>
+    
+            <div id="collapseStandardPhoto" class="collapse" aria-labelledby="standardPhotoPackages">
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_1" value="Standard 1">
+                            <label for="standard_1">0-1500 sqft (35 Photos): $125</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_2" value="Standard 2">
+                            <label for="standard_2">With 50 Photos: $150</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_3" value="Standard 3">
+                            <label for="standard_3">Full-Shot (70+ Photos with Edits): $155</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_4" value="Standard 4">
+                            <label for="standard_4">1501-2500 sqft (35 Photos): $150</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_5" value="Standard 5">
+                            <label for="standard_5">With 50 Photos: $175</label>
+                        </li>
+                        <!-- Additional standard photo packages -->
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_6" value="Standard 6">
+                            <label for="standard_6">Full Shoot (70+ Photos with Edits): $180</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_7" value="Standard 7">
+                            <label for="standard_7">2501-3500 sqft (35 Photos): $175</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="packages[]" id="standard_8" value="Standard 8">
+                            <label for="standard_8">With 50 Photos: $200</label>
+                        </li>
+                        <!-- Include other standard photo packages here -->
+                        <!-- Repeat the structure for other packages -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+      <!-- Video and Media Packages -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseVideoMedia" aria-expanded="true" aria-controls="collapseVideoMedia">
+                Video and Media Packages
+                <span class="arrow"></span>
+              </button>
+              
+            </h2>
+            
+          </div>
+          
+
+          <div id="collapseVideoMedia" class="collapse" aria-labelledby="videoMediaPackages">
+            <div class="card-body">
+                <ul>
+                    <li>
+                      <input type="checkbox" name="packages[]" id="standard_1" value="Standard 1">
+                      <label for="standard_1">30-Second Social Media Teaser (4K Edited): $100 ($50 if added to another package)
+                    </label>
+                    </li>
+                   
+                    <!-- Include other standard photo packages here -->
+                  </ul>
+              <!-- Add video and media package options here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Packages -->
+      <div class="col-lg-4 col-md-6">
+        <div class="card mb-3">
+          <div class="card-header">
+            <h2 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseAdditional" aria-expanded="true" aria-controls="collapseAdditional">
+                Special Services
+                <span class="arrow"></span>
+              </button>
+            </h2>
+          </div>
+
+          <div id="collapseAdditional" class="collapse" aria-labelledby="additionalPackages">
+            <div class="card-body">
+                <ul>
+                    <li>
+                      <input type="checkbox" name="packages[]" id="standard_1" value="Standard 1">
+                      <label for="standard_1">Re-shoot (Updating Previous Shots) 50% discount on all packages
+                    </label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="packages[]" id="standard_1" value="Standard 1">
+                        <label for="standard_1">Long Distance Fee (Over 1 hour from 44406): $25
+                      </label>
+                      </li>
+                    
+                    <!-- Include other standard photo packages here -->
+                  </ul>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Add more columns for additional categories as needed -->
+
+      <!-- Agent Profile Packages -->
+<div class="col-lg-4 col-md-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseAgentProfile" aria-expanded="true" aria-controls="collapseAgentProfile">
+            Agent Profile Packages
+            <span class="arrow"></span>
+          </button>
+        </h2>
+      </div>
+  
+      <div id="collapseAgentProfile" class="collapse" aria-labelledby="agentProfilePackages">
+        <div class="card-body">
+          <ul>
+            <li>
+              <input type="checkbox" name="packages[]" id="profile_headshot" value="Agent Profile Headshot">
+              <label for="profile_headshot">Agent Profile Headshot: $75</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="profile_30sec_video" value="Agent Profile 30-Second Video">
+              <label for="profile_30sec_video">Agent Profile 30-Second Video: $100</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="profile_2min_video" value="Agent 2-Minute Video">
+              <label for="profile_2min_video">Agent 2-Minute Video: $150</label>
+            </li>
+            <!-- Add more agent profile packages here if needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drone Photography Packages -->
+<div class="col-lg-4 col-md-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseDronePhotography" aria-expanded="true" aria-controls="collapseDronePhotography">
+            Drone Photography Packages
+            <span class="arrow"></span>
+          </button>
+        </h2>
+      </div>
+  
+      <div id="collapseDronePhotography" class="collapse" aria-labelledby="dronePhotographyPackages">
+        <div class="card-body">
+          <ul>
+            <li>
+              <input type="checkbox" name="packages[]" id="drone_5_photos" value="Drone (5 Edited Aerial Photos)">
+              <label for="drone_5_photos">Drone (5 Edited Aerial Photos): $100 ($85 if added to a package)</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="drone_video" value="Drone Video">
+              <label for="drone_video">Drone Video: $150</label>
+            </li>
+            <!-- Add more drone photography packages here if needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Additional Photography Services -->
+<div class="col-lg-4 col-md-6">
+    <div class="card mb-3">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseAdditionalPhotography" aria-expanded="true" aria-controls="collapseAdditionalPhotography">
+            Additional Photography Services
+            <span class="arrow"></span>
+          </button>
+        </h2>
+      </div>
+  
+      <div id="collapseAdditionalPhotography" class="collapse" aria-labelledby="additionalPhotographyServices">
+        <div class="card-body">
+          <ul>
+            <li>
+              <input type="checkbox" name="packages[]" id="product_photos" value="Product Photos (10 Photos)">
+              <label for="product_photos">Product Photos (10 Photos): $150</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="car_photos" value="Car Photos (5 Photos)">
+              <label for="car_photos">Car Photos (5 Photos): $100</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="portrait_30min" value="Portrait Shoot (30 Minutes)">
+              <label for="portrait_30min">Portrait Shoot (30 Minutes): $200</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="portrait_1hour" value="Portrait Shoot (1 Hour)">
+              <label for="portrait_1hour">Portrait Shoot (1 Hour): $300</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="half_day_shoot" value="Half-Day Shoot (4 Hours)">
+              <label for="half_day_shoot">Half-Day Shoot (4 Hours): $600</label>
+            </li>
+            <li>
+              <input type="checkbox" name="packages[]" id="full_day_shoot" value="Full-Day Shoot (8 Hours)">
+              <label for="full_day_shoot">Full-Day Shoot (8 Hours): $1000</label>
+            </li>
+            <!-- Add more additional photography services here if needed -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+
+    <button type="submit" class="btn btn-dark " style="margin-bottom: 50px;">Submit Selected Services</button>
+
+  </form>
+</div>
+{% endblock main_content %}
